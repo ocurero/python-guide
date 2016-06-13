@@ -1,7 +1,7 @@
-Getting Started with Python
----------------------------
+Introducción a Python
+---------------------
 
-New to Python? Let's properly setup up your Python environment.
+¿Nuevo en Python? Configuremos correctamente tu entorno de Python.
 
 .. toctree::
    :maxdepth: 2
