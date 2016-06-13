@@ -3,24 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The Hitchhiker's Guide to Python!
-=================================
+Guia del viajero intergalactico de Python!
+=========================================
 
-Greetings, Earthling! Welcome to The Hitchhiker's Guide to Python.
+Saludos terricola! Bienvenido a La guia del viajero intergalactico de Python.
 
-**This is a living, breathing guide.**  If you'd like to contribute,
-`fork us on GitHub <https://github.com/kennethreitz/python-guide>`_!
+**Esta guia está viva.**  Si quieres contribuir a la edición inglesa, bifurca el código en GitHub <https://github.com/kennethreitz/python-guide>!
 
-This handcrafted guide exists to provide both novice and expert Python
-developers a best practice handbook to the installation, configuration, and
-usage of Python on a daily basis.
+Esta guia es artesanal y proporciona tanto a programadores principiantes como a expertos un libro de mejores prácticas en la instalación, conmfiguración y uso de Python en el manejo dia a dia.  
 
-This guide is **opinionated** in a way that is almost, but not quite, entirely
-*unlike* Python's official documentation. You won't find a list of every Python web framework
-available here. Rather, you'll find a nice concise list of highly recommended
-options.
+Esta guia es casi en su totalidad **subjetiva**, bien al *contrario* de la documentación oficinal de Python. No encontrarás una lista de todos y cada uno de los frameworks web disponibles, encontrarás una lista concisa de cuales son altamente recomendables.
 
-
-Let's get started! But first, let's make sure you know where your towel is.
+Empecemos! Pero antes de nada, aseguremonos de que tenemos todo en orden. 
 
 .. include:: contents.rst.inc
