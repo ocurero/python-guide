@@ -8,7 +8,7 @@ Guia del viajero intergalactico de Python!
 
 Saludos terricola! Bienvenido a La guia del viajero intergalactico de Python.
 
-**Esta guia está viva.**  Si quieres contribuir a la edición inglesa, bifurca el código en GitHub <https://github.com/kennethreitz/python-guide>!
+**Esta guia está viva.**  Si quieres contribuir a la edición inglesa, `bifurca el código en GitHub <https://github.com/kennethreitz/python-guide>`_!
 
 Esta guia es artesanal y proporciona tanto a programadores principiantes como a expertos un libro de mejores prácticas en la instalación, conmfiguración y uso de Python en el manejo dia a dia.  
 
