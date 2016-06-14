@@ -1,7 +1,7 @@
 Introducción a Python
 ---------------------
 
-¿Nuevo en Python? Configuremos correctamente tu entorno de Python.
+¿Nuevo en Python? Vamos a configurar tu entorno de Python.
 
 .. toctree::
    :maxdepth: 2
