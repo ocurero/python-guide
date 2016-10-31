@@ -1,26 +1,29 @@
 .. _install-osx:
 
-Installing Python on Mac OS X
+Instalando Python en Mac OS X
 =============================
 
-The latest version of Mac OS X, El Capitan, **comes with Python 2.7 out of the box**.
+La última versión de Mac OS X, El Capitan, **tiene por defecto Python 2.7**.
 
-You do not need to install or configure anything else to use Python. Having
-said that, I would strongly recommend that you install the tools and libraries
-described in the next section before you start building Python applications
-for real-world use. In particular, you should always install Setuptools, as it
-makes it much easier for you to use other third-party Python libraries.
+No necesitas instalar ni configurar nada más para usar Python. Dicho esto, te
+recomiendo encarecidamente que instales las herramientas y librerías que se
+describen en la siguiente sección antes de empezar a programar en Python. En
+particular, siempre deberías instalar Setuptools y pip puesto que hacen la vida
+mas fácil al usar librerías de terceros.
 
-The version of Python that ships with OS X is great for learning but it's not
-good for development. The version shipped with OS X may be out of date from the
-`official current Python release <https://www.python.org/downloads/mac-osx/>`_,
-which is considered the stable production version.
+La versión de Python proporcionada con OS X está bien para aprender, pero no es
+recomendable para el desarrollo. La versión proporcionada con OS X puede estar
+desactualizada respecto a la versión `oficial y actual de Python <https://www.python.org/downloads/mac-osx/>`_,
+que es la que se considera como estable para el público en general.
 
-Doing it Right
+
+Hacerlo bien
 --------------
 
-Let's install a real version of Python.
+Vamos a instalar una versión real de Python.
 
+Antes de instalar Python, necesitarás instalar GCC. El GCC se puede obtener
+descargando `Xcode <http://developer.apple.com/xcode/>`_, 
 Before installing Python, you'll need to install GCC. GCC can be obtained
 by downloading `Xcode <http://developer.apple.com/xcode/>`_, the smaller
 `Command Line Tools <https://developer.apple.com/downloads/>`_ (must have an

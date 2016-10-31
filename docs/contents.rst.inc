@@ -1,29 +1,29 @@
 Introducción a Python
 ---------------------
 
-¿Nuevo en Python? Vamos a configurar tu entorno de Python.
+¿Nuevo en Python? Vamos a configurar tu entorno.
 
 .. toctree::
    :maxdepth: 2
 
    starting/which-python
 
-- Properly Install Python
+- Instalar Python         
 
  .. toctree::
     :maxdepth: 1
 
-    starting/installation
+    starting/install 
     starting/install/osx
     starting/install/win
     starting/install/linux
 
 
 
-Writing Great Python Code
--------------------------
+Escribir buen codigo en Python
+-------------------------------
 
-This part of the guide focuses on the best-practices for writing Python code.
+Esta parte de la guia se centra en buenas prácticas para escribir código en Python.
 
 .. toctree::
    :maxdepth: 2
@@ -39,11 +39,11 @@ This part of the guide focuses on the best-practices for writing Python code.
 
 
 
-Scenario Guide for Python Applications
---------------------------------------
+Escenarios de aplicaciones en Python
+------------------------------------
 
-This part of the guide focuses on tool and module advice based on
-different scenarios.
+Esta parte de la guia se centra en herramientas y modulos para varios
+escenarios.
 
 .. toctree::
    :maxdepth: 2
@@ -67,10 +67,10 @@ different scenarios.
    scenarios/clibs
 
 
-Shipping Great Python Code
---------------------------
+Distribuir excelente código en Python
+-------------------------------------
 
-This part of the guide focuses on deploying your Python code.
+Esta parte del a guia se centra en distribuir tu código de Python.
 
 .. toctree::
    :maxdepth: 2
@@ -79,11 +79,11 @@ This part of the guide focuses on deploying your Python code.
    shipping/freezing
 
 
-Python Development Environments
--------------------------------
+Entornos de desarrollo de Python
+--------------------------------
 
-This part of the guide focus on the Python development environment,
-and the best-practice tools that are available for writing Python code.
+Esta parte de la guia se centra en entornos de desarrollo para Python y las
+mejores herramientas para escribir el código.
 
 .. toctree::
    :maxdepth: 2
@@ -95,11 +95,11 @@ and the best-practice tools that are available for writing Python code.
 
 
 
-Additional Notes
-----------------
+Notas adicionales
+-----------------
 
-This part of the guide, which is mostly prose, begins with some
-background information about Python, then focuses on next steps.
+Esta parte de la guia se centra en información de contexto sobre Python y
+después se centra en los siguientes pasos.
 
 .. toctree::
    :maxdepth: 2

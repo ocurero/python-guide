@@ -1,70 +1,74 @@
 .. _install-linux:
 
-Installing Python on Linux
+Instalar Python en Linux
 ==========================
 
-The latest versions of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu 
-**come with Python 2.7 out of the box**.
+Las ultimas versiones de CentOS, Fedora, Redhat Enterprise (RHEL) y Ubuntu      
+**ya tienen Python 2.7 por defecto**.
 
-To see which version of Python you have installed, open a command prompt and run
+Para saber qué versión de Python está instalada, abre una pantalla de simbolo
+de sistema y ejecuta
 
 .. code-block:: console
 
     $ python --version
 
-Some older versions of RHEL and CentOS come with Python 2.4 which is
-unacceptable for modern Python development. Fortunately, there are
-`Extra Packages for Enterprise Linux`_ which include high
-quality additional packages based on their Fedora counterparts. This
-repository contains a Python 2.6 package specifically designed to install
-side-by-side with the system's Python 2.4 installation.
+Algunas versiones antiguas de RHEL y CentOS tienen Python 2.4, que es demasiado
+antiguo para el desarrollo actual de Python. Afortunadamente hay paquetes extra
+para `Extra Packages for Enterprise Linux`_ que incluyen paquetes de mucha calidad basados en Fedora. Este
+repositorio contiene Python 2.6 epecificamente diseñado para ser instalado
+junto con la instalación de Python 2.4 del propio sistena operativo.
 
 .. _Extra Packages for Enterprise Linux: http://fedoraproject.org/wiki/EPEL
 
-You do not need to install or configure anything else to use Python. Having
-said that, I would strongly recommend that you install the tools and libraries
-described in the next section before you start building Python applications
-for real-world use. In particular, you should always install Setuptools and pip, as
-it makes it much easier for you to use other third-party Python libraries.
+No necesitas instalar ni configurar nada más para usar Python. Dicho esto, te
+recomiendo encarecidamente que instales las herramientas y librerías que se
+describen en la siguiente sección antes de empezar a programar en Python. En
+particular, siempre deberías instalar Setuptools y pip puesto que hacen la vida
+mas fácil al usar librerías de terceros.
 
-Setuptools & Pip
+Setuptools y Pip
 ----------------
 
-The two most crucial third-party Python packages are `setuptools <https://pypi.python.org/pypi/setuptools>`_ and `pip <https://pip.pypa.io/en/stable/>`_.
+Las dos librerias de paquetes externas más importantes son `setuptools <https://pypi.python.org/pypi/setuptools>`_
+ y `pip <https://pip.pypa.io/en/stable/>`_.
 
-Once installed, you can download, install and uninstall any compliant Python software 
-product with a single command. It also enables you to add this network installation 
-capability to your own Python software with very little work.
+Una vez instaladas, puedes descargar, instalar y desinstalar cualquier programa
+de Python que cumpla las especificaciones con un solo comando. Esto también te
+permite usar la instalación en red para tus propios programas sin demasiado
+esfuerzo.
 
-Python 2.7.9 and later (on the python2 series), and Python 3.4 and later include 
-pip by default.
+Python 2.7.9 y posteriores (en la versión 2 de Python) y Python 3.4 y
+posteriores incluyen el paquete pip de forma predeterminada.
 
-To see if pip is installed, open a command prompt and run
+Para saber si el paquete pip está instalado, abre un terminal y ejecuta:
 
 .. code-block:: console
 
     $ command -v pip
 
-To install pip, `follow the official pip installation guide <https://pip.pypa.io/en/latest/installing/>`_ - this will automatically install the latest version of setuptools.
+Para instalar pip, `sigue la guia oficial de pip <https://pip.pypa.io/en/latest/installing/>`_.
+Al instalar pip también se instalará la ultima versión del paquete setuptools.
 
-Virtual Environments
---------------------
+Entornos virtuales
+------------------
 
-A Virtual Environment is a tool to keep the dependencies required by different projects 
-in separate places, by creating virtual Python environments for them. It solves the 
-"Project X depends on version 1.x but, Project Y needs 4.x" dilemma, and keeps 
-your global site-packages directory clean and manageable.
+Un entorno virtual es una herramienta para crear entornos de Python de manera
+que las dependencias requeridas por diferentes proyectos esten separadas. Esto
+soluciona problemas del estilo "el proyecto X depende de la versión 1.x pero el
+proyecto Y necesita la versión 2.x" y permite mantener tu directorio de
+paquetes globales (site-packages) limpio.
 
-For example, you can work on a project which requires Django 1.3 while also
-maintaining a project which requires Django 1.0.
+Por ejemplo, puedes trabajar en un proyecto que requiere Django 1.3 mientras
+que otro requiere Django 1.0.
 
-To start using this and see more information: :ref:`Virtual Environments <virtualenvironments-ref>` docs. 
+Para usar entornos virtuales y tener más información, visita la documentación :ref:`Virtual Environments <virtualenvironments-ref>`.
 
-You can also use :ref:`virtualenvwrapper <virtualenvwrapper-ref>` to make it easier to
-manage your virtual environments.
+Tambiñen puedes usar :ref:`virtualenvwrapper <virtualenvwrapper-ref>` para que
+sea más sencillo gestionar tus entornos virtuales.
 
 --------------------------------
 
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-which is available under the same license.
+Esta página es una mezcla de versiones de `otra guia <http://www.stuartellis.eu/articles/python-development-windows/>`_,
+que está displonible bajo la misma licencia.
 
