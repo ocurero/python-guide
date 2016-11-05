@@ -22,83 +22,86 @@ Hacerlo bien
 
 Vamos a instalar una versión real de Python.
 
-Antes de instalar Python, necesitarás instalar GCC. El GCC se puede obtener
-descargando `Xcode <http://developer.apple.com/xcode/>`_, 
-Before installing Python, you'll need to install GCC. GCC can be obtained
-by downloading `Xcode <http://developer.apple.com/xcode/>`_, the smaller
-`Command Line Tools <https://developer.apple.com/downloads/>`_ (must have an
-Apple account) or the even smaller `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_
-package.
+Antes de instalar Python, necesitarás instalar GCC. El compilador GCC se puede
+ obtener descargando `Xcode <http://developer.apple.com/xcode/>`_, el paquete
+ pequeño `Command Line Tools <https://developer.apple.com/downloads/>`_ (debes
+ tener una cuenta Apple) o el paquete todavía más pequeño `OSX-GCC-Installer
+ <https://github.com/kennethreitz/osx-gcc-installer#readme>`_.
 
 .. note::
-    If you already have Xcode installed, do not install OSX-GCC-Installer.
-    In combination, the software can cause issues that are difficult to
-    diagnose.
+    Si ya tienes instalado el paquete Xcode no instales el pquete
+    OSX-GCC-Installer. En combinación, pueden probocar problemas de difícil
+    diagnóstico.
 
 .. note::
-    If you perform a fresh install of Xcode, you will also need to add the 
-    commandline tools by running ``xcode-select --install`` on the terminal.
+    Si quieres hacer una instalación desde cero de Xcode también necesitarás el
+    paquete de "Command Line Tools" ejecutando ``xcode-select --install`` en el
+    terminal.
 
-While OS X comes with a large number of UNIX utilities, those familiar with
-Linux systems will notice one key component missing: a decent package manager.
-`Homebrew <http://brew.sh>`_ fills this void.
+Aunque OS X tiene una gran cantidad de herramientas UNIX, aquellos que estén
+familiarizados con sistemas Linux se encontrarán que falta un componente
+básico: un gestor de paquetes decente. `Homebrew <http://brew.sh>`_ llena este
+hueco.
 
-To `install Homebrew <http://brew.sh/#install>`_, open :file:`Terminal` or
-your favorite OSX terminal emulator and run
+Para `instalar Homebrew <http://brew.sh/#install>`_ abre :file:`Terminal` o tu
+terminal OSX favorito y ejecuta:
 
 .. code-block:: console
 
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-The script will explain what changes it will make and prompt you before the
-installation begins.
-Once you've installed Homebrew, insert the Homebrew directory at the top
-of your :envvar:`PATH` environment variable. You can do this by adding the following
-line at the bottom of your :file:`~/.profile` file
+El script explicará que cambios hará y preguntará antes de que empiece la
+instalación.
+Una vez hayas instalado Homebrew, añade el directorio de Homebew al principio
+de tu variable de entorno :envvar:`PATH` . Puedes hacer esto si añades al final
+del fichero :file:`~/.profile` la siguiente linea:
 
 .. code-block:: console
 
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-Now, we can install Python 2.7:
+Ahora ya puedes instalar Python 2.7:
 
 .. code-block:: console
 
     $ brew install python
 
-This will take a minute or two. 
+Esto tomará un minuto o dos. 
 
 
-Setuptools & Pip
+Setuptools y Pip
 ----------------
 
-Homebrew installs Setuptools and ``pip`` for you.
+Homebrew instala Setuptools y ``pip`` por ti. 
 
-Setuptools enables you to download and install any compliant Python
-software over a network (usually the Internet) with a single command
-(``easy_install``). It also enables you to add this network installation
-capability to your own Python software with very little work.
-
-``pip`` is a tool for easily installing and managing Python packages,
-that is recommended over ``easy_install``. It is superior to ``easy_install`` in `several ways <https://python-packaging-user-guide.readthedocs.org/en/latest/pip_easy_install/#pip-vs-easy-install>`_,
-and is actively maintained.
+Setuptools te permite descargar, instalar y desinstalar cualquier programa
+de Python que cumpla las especificaciones con un solo comando
+(``easy_install``). Esto también te permite usar la instalación en red para tus propios programas sin demasiado esfuerzo.
 
 
-Virtual Environments
---------------------
+``pip`` es una herramienta para instalar y gestionar de manera fácil los
+paquetes de Python, que es recomendada por encima de ``easy_install``. Es
+superior a ``easy_install`` en `varios aspectos <https://python-packaging-user-guide.readthedocs.org/en/latest/pip_easy_install/#pip-vs-easy-install>`_ y está mantenida activamente.
 
-A Virtual Environment is a tool to keep the dependencies required by different projects 
-in separate places, by creating virtual Python environments for them. It solves the 
-"Project X depends on version 1.x but, Project Y needs 4.x" dilemma, and keeps 
-your global site-packages directory clean and manageable.
 
-For example, you can work on a project which requires Django 1.3 while also
-maintaining a project which requires Django 1.0.
+Entornos virtuales
+------------------
 
-To start using this and see more information: :ref:`Virtual Environments <virtualenvironments-ref>` docs. 
+Un entorno virtual es una herramienta para crear entornos de Python de manera
+que las dependencias requeridas por diferentes proyectos estén separadas. Esto
+soluciona problemas del estilo "el proyecto X depende de la versión 1.x pero el
+proyecto Y necesita la versión 2.x" y permite mantener tu directorio de
+paquetes globales (site-packages) limpio.
 
+Por ejemplo, puedes trabajar en un proyecto que requiere Django 1.3 mientras
+que otro requiere Django 1.0.
+
+Para usar entornos virtuales y tener más información, visita la documentación :ref:`Virtual Environments <virtualenvironments-ref>`.
+
+También puedes usar :ref:`virtualenvwrapper <virtualenvwrapper-ref>` para que
+sea más sencillo gestionar tus entornos virtuales.
 
 --------------------------------
 
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-which is available under the same license.
+Esta página es una mezcla de versiones de `otra guia <http://www.stuartellis.eu/articles/python-development-windows/>`_,
+que está disponible bajo la misma licencia.
