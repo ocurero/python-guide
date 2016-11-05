@@ -6,8 +6,8 @@ Instalar Python en Linux
 Las ultimas versiones de CentOS, Fedora, Redhat Enterprise (RHEL) y Ubuntu      
 **ya tienen Python 2.7 por defecto**.
 
-Para saber qué versión de Python está instalada, abre una pantalla de simbolo
-de sistema y ejecuta
+Para saber qué versión de Python está instalada, abre una ventana de símbolo
+de sistema y ejecuta:
 
 .. code-block:: console
 
@@ -15,9 +15,7 @@ de sistema y ejecuta
 
 Algunas versiones antiguas de RHEL y CentOS tienen Python 2.4, que es demasiado
 antiguo para el desarrollo actual de Python. Afortunadamente hay paquetes extra
-para `Extra Packages for Enterprise Linux`_ que incluyen paquetes de mucha calidad basados en Fedora. Este
-repositorio contiene Python 2.6 epecificamente diseñado para ser instalado
-junto con la instalación de Python 2.4 del propio sistena operativo.
+para `Extra Packages for Enterprise Linux`_ que incluyen paquetes de mucha calidad basados en Fedora. Este repositorio contiene Python 2.6 específicamente diseñado para ser instalado junto con la instalación de Python 2.4 del propio sistema operativo.
 
 .. _Extra Packages for Enterprise Linux: http://fedoraproject.org/wiki/EPEL
 
@@ -30,7 +28,7 @@ mas fácil al usar librerías de terceros.
 Setuptools y Pip
 ----------------
 
-Las dos librerias de paquetes externas más importantes son `setuptools <https://pypi.python.org/pypi/setuptools>`_
+Las dos librerías de paquetes externas más importantes son `setuptools <https://pypi.python.org/pypi/setuptools>`_
  y `pip <https://pip.pypa.io/en/stable/>`_.
 
 Una vez instaladas, puedes descargar, instalar y desinstalar cualquier programa
@@ -54,7 +52,7 @@ Entornos virtuales
 ------------------
 
 Un entorno virtual es una herramienta para crear entornos de Python de manera
-que las dependencias requeridas por diferentes proyectos esten separadas. Esto
+que las dependencias requeridas por diferentes proyectos estén separadas. Esto
 soluciona problemas del estilo "el proyecto X depende de la versión 1.x pero el
 proyecto Y necesita la versión 2.x" y permite mantener tu directorio de
 paquetes globales (site-packages) limpio.
@@ -64,11 +62,11 @@ que otro requiere Django 1.0.
 
 Para usar entornos virtuales y tener más información, visita la documentación :ref:`Virtual Environments <virtualenvironments-ref>`.
 
-Tambiñen puedes usar :ref:`virtualenvwrapper <virtualenvwrapper-ref>` para que
+También puedes usar :ref:`virtualenvwrapper <virtualenvwrapper-ref>` para que
 sea más sencillo gestionar tus entornos virtuales.
 
 --------------------------------
 
 Esta página es una mezcla de versiones de `otra guia <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-que está displonible bajo la misma licencia.
+que está disponible bajo la misma licencia.
 

@@ -73,7 +73,7 @@ que se puede implementar de muchas maneras diferentes.
 CPython
 -------
 
-`CPython <http://www.python.org>`_ es la implementación de refererencia de 
+`CPython <http://www.python.org>`_ es la implementación de referencia de 
 Python escrita en C. Compila el código Python a un bytecode intermedio que
 luego se interpreta en una maquina virtual. CPython proporciona la mayor
 compatibilidad con paquetes de Python y extensiones en C.
@@ -83,7 +83,7 @@ audiencia mayor, usar CPython es lo más recomendable. Para usar paquetes que
 dependen de extensiones en C para funcionar, CPython es tu única implementación
 posible.
 
-Todas las versiones del lenguaje Python estan implementadas en C porque CPython
+Todas las versiones del lenguaje Python están implementadas en C porque CPython
 es la implementación de referencia.
 
 PyPy
@@ -135,8 +135,9 @@ PythonNet
 
 `Python para .NET <http://pythonnet.github.io/>`_ es un paquete que
 proporciona una integración casi perfecta entre una instalación nativa de
-Python y el .NET Common Language Runtime o CLR ("Entorno en tiempo de ejecución de lenguaje común"). Es la solución inversa tomada por IronPython (ver arriba), donde es más un complemento que una alternativa.
-
+Python y el .NET Common Language Runtime o CLR ("Entorno en tiempo de ejecución
+ de lenguaje común"). Es la solución inversa tomada por IronPython (ver arriba),
+ donde es más un complemento que una alternativa.  
 En compañía de Mono, PythonNet permite ejecutar código Python en sistemas
 operativos diferentes de Windows, como OS X y Linux, bajo la plataforma .NET.
 Puede usarse junto con IronPython sin ningún problema.
