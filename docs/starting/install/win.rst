@@ -1,86 +1,92 @@
 .. _install-windows:
 
-Installing Python on Windows
-============================
+Instalar Python en Windows
+==========================
 
-First, download the `latest version <https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi>`_
-of Python 2.7 from the official Website. If you want to be sure you are installing a fully
-up-to-date version, click the Downloads > Windows link from the home page of the
-`Python.org web site <http://python.org>`_ .
 
-The Windows version is provided as an MSI package. To install it manually, just
-double-click the file. The MSI package format allows Windows administrators to
-automate installation with their standard tools.
+Primero descarga la `ùltima versión <https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi>`_
+de Python 2.7 desde la página oficial. Si quieres estar seguro de que estás
+instalando la versión mas actualizada, haz clic en el enlace Descargas > Windows
+desde la `página principal de Python <http://python.org>`_ .
 
-By design, Python installs to a directory with the version number embedded,
-e.g. Python version 2.7 will install at :file:`C:\\Python27\\`, so that you can
-have multiple versions of Python on the
-same system without conflicts. Of course, only one interpreter can be the
-default application for Python file types. It also does not automatically
-modify the :envvar:`PATH` environment variable, so that you always have control over
-which copy of Python is run.
+La versión para Windows es un paquete MSI. Para instalarlo manualmente, haz
+doble clic en el fichero. Los paquetes MSI permiten a los administradores
+automatizar las instalaciones con las herramientas estándar.
 
-Typing the full path name for a Python interpreter each time quickly gets
-tedious, so add the directories for your default Python version to the :envvar:`PATH`.
-Assuming that your Python installation is in :file:`C:\\Python27\\`, add this to your
+Por diseño, Python se instala en un directorio con la versión incluida. Por
+ejemplo, Python 2.7 se instalará en :file:`C:\\Python27\\` de manera que pueda
+convivir con diferentes versiones sin problema. Obviamente, sólo puede haber un
+interprete por defecto para los archivos de Python. Tampoco se modifica
+automaticamente la variable de entorno :envvar:`PATH`, de manera que siempre
+tienes el control de qué versión de Python quieres que se ejecute.
+
+Escribir la ruta completa al interprete de Python una y otra vez es tedioso,
+así que añade los directorio de tu interprete de Python por defecto a la
+variable :envvar:`PATH`. Suponiendo que tu instalación por defecto está en
+directorio :file:`C:\\Python27\\`, añade lo siguiente a tu variable de entorno
 :envvar:`PATH`:
 
 .. code-block:: console
 
     C:\Python27\;C:\Python27\Scripts\
 
-You can do this easily by running the following in ``powershell``:
+Puedes hacer esto ejecutando el siguiente comando en una sesión ``powershell``:
 
 .. code-block:: console
 
     [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27\;C:\Python27\Scripts\", "User")
 
-The second (:file:`Scripts`) directory receives command files when certain
-packages are installed, so it is a very useful addition.
-You do not need to install or configure anything else to use Python. Having
-said that, I would strongly recommend that you install the tools and libraries
-described in the next section before you start building Python applications for
-real-world use. In particular, you should always install Setuptools, as it
-makes it much easier for you to use other third-party Python libraries.
+El segundo directorio (:file:`Scripts`) recibe comandos cuando se instalan
+ciertos paquetes, de manera que es muy recomendable añadirlo también.
 
-Setuptools + Pip
+No necesitas instalar ni configurar nada más para usar Python. Dicho esto, te
+recomiendo encarecidamente que instales las herramientas y librerías que se
+describen en la siguiente sección antes de empezar a programar en Python. En
+particular, siempre deberías instalar Setuptools y pip puesto que hacen la vida
+mas fácil al usar librerías de terceros.
+
+Setuptools y Pip
 ----------------
 
-The most crucial third-party Python software of all is Setuptools, which
-extends the packaging and installation facilities provided by the distutils in
-the standard library. Once you add Setuptools to your Python system you can
-download and install any compliant Python software product with a single
-command. It also enables you to add this network installation capability to
-your own Python software with very little work.
+Las dos librerías de paquetes externas más importantes son `setuptools <https://pypi.python.org/pypi/setuptools>`_
+ y `pip <https://pip.pypa.io/en/stable/>`_.
 
-To obtain the latest version of Setuptools for Windows, run the Python script
-available here: `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py>`_
+Una vez instaladas, puedes descargar, instalar y desinstalar cualquier programa
+de Python que cumpla las especificaciones con un solo comando. Esto también te
+permite usar la instalación en red para tus propios programas sin demasiado
+esfuerzo.
+
+Python 2.7.9 y posteriores (en la versión 2 de Python) y Python 3.4 y
+posteriores incluyen el paquete pip de forma predeterminada.
+
+Para saber si el paquete pip está instalado, abre un terminal y ejecuta:
+
+.. code-block:: console
+
+    $ command -v pip
+
+Para instalar pip, `sigue la guia oficial de pip <https://pip.pypa.io/en/latest/installing/>`_.
+Al instalar pip también se instalará la ultima versión del paquete setuptools.
 
 
-You'll now have a new command available to you: **easy_install**. It is
-considered by many to be deprecated, so we will install its replacement:
-**pip**. Pip allows for uninstallation of packages, and is actively maintained,
-unlike easy_install.
+Entornos virtuales
+------------------
 
-To install pip, run the Python script available here:
-`get-pip.py <https://raw.github.com/pypa/pip/master/contrib/get-pip.py>`_
+Un entorno virtual es una herramienta para crear entornos de Python de manera
+que las dependencias requeridas por diferentes proyectos estén separadas. Esto
+soluciona problemas del estilo "el proyecto X depende de la versión 1.x pero el
+proyecto Y necesita la versión 2.x" y permite mantener tu directorio de
+paquetes globales (site-packages) limpio.
 
+Por ejemplo, puedes trabajar en un proyecto que requiere Django 1.3 mientras
+que otro requiere Django 1.0.
 
-Virtual Environments
---------------------
+Para usar entornos virtuales y tener más información, visita la documentación :ref:`Virtual Environments <virtualenvironments-ref>`.
 
-A Virtual Environment is a tool to keep the dependencies required by different projects 
-in separate places, by creating virtual Python environments for them. It solves the 
-"Project X depends on version 1.x but, Project Y needs 4.x" dilemma, and keeps 
-your global site-packages directory clean and manageable.
-
-For example, you can work on a project which requires Django 1.3 while also
-maintaining a project which requires Django 1.0.
-
-To start using this and see more information: :ref:`Virtual Environments <virtualenvironments-ref>` docs. 
-
+También puedes usar :ref:`virtualenvwrapper <virtualenvwrapper-ref>` para que
+sea más sencillo gestionar tus entornos virtuales.
 
 --------------------------------
 
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-which is available under the same license.
+Esta página es una mezcla de versiones de `otra guia <http://www.stuartellis.eu/articles/python-development-windows/>`_,
+que está disponible bajo la misma licencia.
